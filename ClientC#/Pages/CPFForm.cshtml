@@ -1,0 +1,29 @@
+﻿@page
+@model CPFFormModel
+
+<header class="d-flex">
+    <a href="/" class="btn">Home</a>
+    <h1>Cliente C#</h1>
+</header>
+<main>
+    <div class="container">
+        <h2 class="page-title">Validar CPF</h2>
+        @if (Model.WasValidated)
+        {
+            <div class="result @Model.ValidationClass">@Model.ValidationMessage</div>
+        }
+        <form action="" method="POST" class="validate-form">
+            <div class="form-row">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" class="required">
+            </div>
+            <div class="form-row">
+                <input type="hidden" name="action" value="validar">
+                <button class="btn btn-primary">Validar</button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer class="d-flex">
+    <p>&copy; ABC Bolinhas - 2021</p>
+</footer>

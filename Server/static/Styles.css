@@ -48,6 +48,10 @@ select {
     border: solid 1px #ccc;
     outline: none;
 }
+input[readonly] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
 
 form .invalid {
     border-color: red !important;

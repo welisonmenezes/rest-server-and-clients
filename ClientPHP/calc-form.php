@@ -64,7 +64,6 @@ if (isset($_POST) && isset($_POST["action"]) && $_POST["action"] == 'calcular') 
                     <button class="btn btn-primary">Calcular</button>
                 </div>
             </form>
-            </form>
         </div>
     </main>
     <footer class="d-flex">

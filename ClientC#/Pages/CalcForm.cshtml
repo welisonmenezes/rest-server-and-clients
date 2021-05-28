@@ -1,0 +1,44 @@
+﻿@page
+@model CalcFormModel
+
+<header class="d-flex">
+    <a href="/" class="btn">Home</a>
+    <h1>Cliente C#</h1>
+</header>
+<main>
+    <div class="container">
+        <h2 class="page-title">Calculadora</h2>
+        @if (Model.WasCalculated)
+        {
+            <div class="result success">O resultado é: @Model.Result</div>
+        }
+        <form action="" method="POST" class="validate-form">
+            <div class="form-row">
+                <label for="num1">Numero 1:</label>
+                <input type="number" name="num1" id="num1" class="required">
+            </div>
+            <div class="form-row">
+                <label for="operator">Operação</label>
+                <select name="operator" id="operator" class="required">
+                    <option value="">Operação</option>
+                    <option value="Somar">Somar</option>
+                    <option value="Subtrair">Subtrair</option>
+                    <option value="Multiplicar">Multiplicar</option>
+                    <option value="Dividir">Dividir</option>
+                    <option value="Resto">Resto</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="num2">Numero 2:</label>
+                <input type="number" name="num2" id="num2" class="required">
+            </div>
+            <div class="form-row">
+                <input type="hidden" name="action" value="calcular">
+                <button class="btn btn-primary">Calcular</button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer class="d-flex">
+    <p>&copy; ABC Bolinhas - 2021</p>
+</footer>

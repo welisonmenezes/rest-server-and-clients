@@ -1,0 +1,46 @@
+﻿@page
+@using Models
+@model UsersModel
+
+<header class="d-flex">
+    <a href="/" class="btn">Home</a>
+    <h1>Cliente C#</h1>
+</header>
+<main>
+    <div class="container">
+        <div class="header">
+            <a href="/UserForm" class="btn btn-primary">Cadastrar</a>
+            <h2 class="page-title">Usuários</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Ocupação</th>
+                    <th class="th-action">Deletar</th>
+                    <th class="th-action">Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(UserViewModel user in Model.users) 
+                { 
+                    <tr>
+                        <td>@user.nome</td>
+                        <td>@user.idade</td>
+                        <td>@user.ocupacao</td>
+                        <td class="th-action">
+                            <a href="/Users?action=deletar&name=@user.nome" class="btn danger">Deletar</a>
+                        </td>
+                        <td class="th-action">
+                            <a href="/UserForm?name=@user.nome" class="btn info">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+<footer class="d-flex">
+    <p>&copy; ABC Bolinhas - 2021</p>
+</footer>

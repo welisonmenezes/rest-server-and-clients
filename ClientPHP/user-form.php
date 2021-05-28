@@ -36,6 +36,7 @@ if (isset($_GET) && isset($_GET["name"])) {
         $age = $data->idade;
         $role = $data->ocupacao;
         $action = "editar";
+        $title = "Editar Usuário";
     }
 }
 ?>
@@ -60,7 +61,11 @@ if (isset($_GET) && isset($_GET["name"])) {
             <form action="" method="POST" class="validate-form">
                 <div class="form-row">
                     <label for="name">Nome:</label>
-                    <input type="text" name="name" id="name" class="required" value="<?php echo $name; ?>">
+                    <?php if ($action == 'editar') { ?>
+                        <input type="text" name="name" id="name" class="required" value="<?php echo $name; ?>" readonly>
+                    <?php } else { ?>
+                        <input type="text" name="name" id="name" class="required" value="<?php echo $name; ?>">
+                    <?php } ?>
                 </div>
                 <div class="form-row">
                     <label for="age">Idade:</label>
