@@ -3,6 +3,8 @@
 ## Tecnologias e Bibliotecas 
 
 - Python 3.9.5
+- flask
+- flask_restful
 
 ## Execute os seguintes comandos dentro do diretório Server/
 
