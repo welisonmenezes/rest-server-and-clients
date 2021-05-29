@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente GO</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/Styles.css">
+</head>
+<body>
+    <header class="d-flex">
+        <a href="/" class="btn">Home</a>
+        <a href="/users" class="btn last">Usuários</a>
+        <h1>Cliente GO</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="page-title">{{.Title}}</h2>
+            <form action="" method="POST" class="validate-form">
+                <div class="form-row">
+                    <label for="name">Nome:</label>
+                    {{if eq  .Action "cadastrar"}}
+                        <input type="text" name="name" id="name" class="required" value="{{.Nome}}">
+                    {{else}}
+                        <input type="text" name="name" id="name" class="required" value="{{.Nome}}" disabled>
+                    {{end}}
+                </div>
+                <div class="form-row">
+                    <label for="age">Idade:</label>
+                    <input type="number" name="age" id="age" class="required" value="{{.Idade}}">
+                </div>
+                <div class="form-row">
+                    <label for="role">Ocupação:</label>
+                    <input type="text" name="role" id="role" class="required" value="{{.Ocupacao}}">
+                </div>
+                <div class="form-row">
+                    <input type="hidden" name="action" value="{{.Action}}">
+                    <button class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="d-flex">
+        <p>&copy; ABC Bolinhas - 2021</p>
+    </footer>
+    <script src="http://127.0.0.1:5000/static/App.js"></script>
+</body>
+</html>

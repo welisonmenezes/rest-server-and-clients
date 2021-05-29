@@ -1,43 +1,23 @@
-<?php 
-require_once("restclient.php");
-
-$api = new RestClient([
-    'base_url' => 'http://127.0.0.1:5000/',  
-]);
-
-$data = null;
-
-if (isset($_POST) && isset($_POST["action"]) && $_POST["action"] == 'calcular') {
-    $data_to_send = array(
-        'num1' => $_POST["num1"],
-        'num2' => $_POST["num2"],
-        'operador' => $_POST["operator"]
-    );
-
-    $result = $api->post('calc/', $data_to_send);
-    $data = $result->decode_response();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente PHP</title>
+    <title>Cliente GO</title>
     <link rel="stylesheet" href="http://127.0.0.1:5000/static/Styles.css">
 </head>
 <body>
     <header class="d-flex">
-        <a href="index.php" class="btn">Home</a>
-        <h1>Cliente PHP</h1>
+        <a href="/" class="btn">Home</a>
+        <h1>Cliente GO</h1>
     </header>
     <main>
         <div class="container">
             <h2 class="page-title">Calculadora</h2>
-            <?php if ($data && isset($data->resultado))  { ?>
-                <div class="result success">O resultado é: <?php echo $data->resultado; ?></div>
-            <?php } ?>
+            {{if .WasCalculated}}
+                <div class="result success">O resultado é: {{.Resultado}}</div>
+            {{end}}
             <form action="" method="POST" class="validate-form">
                 <div class="form-row">
                     <label for="num1">Numero 1:</label>

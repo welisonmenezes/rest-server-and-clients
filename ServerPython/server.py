@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_restful import Api, Resource, reqparse
 import re
 from flask_cors import CORS
@@ -9,17 +9,17 @@ api = Api(app)
 usuarios = [ 
     {
         "nome": "Abc",
-        "idade": 42,
+        "idade": "42",
         "ocupacao": "oreia"
     },
     {
         "nome": "Bolinhas",
-        "idade": 32,
+        "idade": "32",
         "ocupacao": "seca"
     },
     {
         "nome": "Uniplac",
-        "idade": 22,
+        "idade": "22",
         "ocupacao": "estagiário" 
     } 
 ]
@@ -38,10 +38,18 @@ class User(Resource):
 
 
     def post(self, nome):
+        print("sexo")
+        # json_data = request.get_json(force=True)
+        # print(json_data)
+
+
         parser = reqparse.RequestParser()
         parser.add_argument("idade")
         parser.add_argument("ocupacao")
         args = parser.parse_args()
+
+        print(args["idade"])
+        print(args["ocupacao"])
 
         for user in usuarios:
             if(nome == user["nome"]):

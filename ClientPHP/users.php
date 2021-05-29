@@ -64,7 +64,6 @@ $data = $result->decode_response();
     <footer class="d-flex">
         <p>&copy; ABC Bolinhas - 2021</p>
     </footer>
-
     <script src="http://127.0.0.1:5000/static/App.js"></script>
 </body>
 </html>

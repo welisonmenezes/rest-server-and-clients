@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente GO</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/Styles.css">
+</head>
+<body>
+    <header class="d-flex">
+        <a href="/" class="btn">Home</a>
+        <h1>Cliente GO</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="header">
+                <a href="/user-form" class="btn btn-primary">Cadastrar</a>
+                <h2 class="page-title">Usuários</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Ocupação</th>
+                        <th class="th-action">Deletar</th>
+                        <th class="th-action">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .}}
+                    <tr>
+                        <td>{{.Nome}}</td>
+                        <td>{{.Idade}}</td>
+                        <td>{{.Ocupacao}}</td>
+                        <td class="th-action">
+                            <a href="users?action=deletar&name={{.Nome}}" class="btn danger">Deletar</a>
+                        </td>
+                        <td class="th-action">
+                            <a href="/user-form?view-action=editar&name={{.Nome}}" class="btn info">Editar</a>
+                        </td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="d-flex">
+        <p>&copy; ABC Bolinhas - 2021</p>
+    </footer>
+    <script src="http://127.0.0.1:5000/static/App.js"></script>
+</body>
+</html>
