@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import axios from "axios";
+import logo from '../logo192.png';
 
 function UserForm() {
   const [nome, setNome] = useState("");
@@ -91,7 +92,10 @@ function UserForm() {
         <Link to="/users" className="btn last">
           Usuários
         </Link>
-        <h1>Cliente JS</h1>
+        <h1>
+          <img src={logo} alt="react" />
+          Cliente JS
+        </h1>
       </header>
       <main>
         <div className="container">

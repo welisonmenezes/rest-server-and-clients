@@ -17,13 +17,17 @@ $data = $result->decode_response();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="php.png" />
     <title>Cliente PHP</title>
     <link rel="stylesheet" href="http://127.0.0.1:5000/static/Styles.css">
 </head>
 <body>
     <header class="d-flex">
         <a href="index.php" class="btn">Home</a>
-        <h1>Cliente PHP</h1>
+        <h1>
+            <img src="php.png" alt="php">
+            Cliente PHP
+        </h1>
     </header>
     <main>
         <div class="container">

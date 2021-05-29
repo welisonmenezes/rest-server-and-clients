@@ -6,7 +6,7 @@
 - flask
 - flask_restful
 
-## Execute os seguintes comandos dentro do diretório Server/
+## Execute os seguintes comandos dentro do diretório `ServerPython/`
 
 ### Criar ambiente virtual
 ```
@@ -49,7 +49,7 @@ python server.py
 
 - PHP 8.0.5
 
-## Exectue os seguintes comandos dentro do diretório ClientPHP/
+## Exectue os seguintes comandos dentro do diretório `ClientPHP/`
 
 ### Levantar o server do cliente
 ```
@@ -63,7 +63,7 @@ php -S localhost:5001
 
 - DotNet Core 5
 
-## Exectue os seguintes comandos dentro do diretório ClientC#/
+## Exectue os seguintes comandos dentro do diretório `ClientC#/`
 
 ### Instalar as dependências
 ```
@@ -80,11 +80,11 @@ dotnet run
 
 ## Tecnologias e Bibliotecas 
 
-- ReactJs
-- NPM
-- NodeJs
+- React 17.0.2
+- NPM 6.14.12
+- Node 14.16.1
 
-## Exectue os seguintes comandos dentro do diretório ClientJS/site/
+## Exectue os seguintes comandos dentro do diretório `ClientJS/site/`
 
 ### Instalar as dependências
 ```
@@ -94,4 +94,18 @@ npm install
 ### Levantar o server do cliente
 ```
 npm start
+```
+
+
+# Cliente GO
+
+## Tecnologias e Bibliotecas 
+
+- GO 1.16.4
+
+## Exectue os seguintes comandos dentro do diretório `ClientGO` 
+
+### Levantar o server do cliente
+```
+go run client.go
 ```

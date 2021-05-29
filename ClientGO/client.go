@@ -217,6 +217,7 @@ func userFormHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", indexHandler)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	http.HandleFunc("/calc-form", calcFormHandler)
 	http.HandleFunc("/cpf-form", cpfFormHandler)
 	http.HandleFunc("/users", usersHandler)

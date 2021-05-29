@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
+import logo from '../logo192.png';
 
 function Home() {
   return (
     <div className="Home">
       <header className="d-flex">
-        <h1>Cliente JS</h1>
+        <h1>
+          <img src={logo} alt="react" />
+          Cliente JS
+        </h1>
       </header>
       <main>
         <h2 className="page-title">Escolha uma ação</h2>
