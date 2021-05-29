@@ -51,7 +51,7 @@ python server.py
 
 ## Exectue os seguintes comandos dentro do diretório ClientPHP/
 
-### Levantar o servidor
+### Levantar o server do cliente
 ```
 php -S localhost:5001
 ```
@@ -63,14 +63,35 @@ php -S localhost:5001
 
 - DotNet Core 5
 
-## Exectue os seguintes comandos dentro do diretório ClientPHP/
+## Exectue os seguintes comandos dentro do diretório ClientC#/
 
 ### Instalar as dependências
 ```
 dotnet restore
 ```
 
-### Levantar o servidor
+### Levantar o server do cliente
 ```
 dotnet run
+```
+
+
+# Cliente JS
+
+## Tecnologias e Bibliotecas 
+
+- ReactJs
+- NPM
+- NodeJs
+
+## Exectue os seguintes comandos dentro do diretório ClientJS/site/
+
+### Instalar as dependências
+```
+npm install
+```
+
+### Levantar o server do cliente
+```
+npm start
 ```

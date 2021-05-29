@@ -31,18 +31,18 @@ $data = $result->decode_response();
                 <a href="user-form.php" class="btn btn-primary">Cadastrar</a>
                 <h2 class="page-title">Usuários</h2>
             </div>
-            <?php if(!empty($data)) { ?>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Idade</th>
-                            <th>Ocupação</th>
-                            <th class="th-action">Deletar</th>
-                            <th class="th-action">Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Ocupação</th>
+                        <th class="th-action">Deletar</th>
+                        <th class="th-action">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if(!empty($data)) { ?>
                         <?php for ($i = 0; $i < count($data); $i++)  { ?>
                             <tr>
                                 <td><?php echo $data[$i]->nome; ?></td>
@@ -56,9 +56,9 @@ $data = $result->decode_response();
                                 </td>
                             </tr>
                         <?php } ?>
-                    </tbody>
-                </table>
-            <?php } ?>
+                    <?php } ?>
+                </tbody>
+            </table>
         </div>
     </main>
     <footer class="d-flex">
