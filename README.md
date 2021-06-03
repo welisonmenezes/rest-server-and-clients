@@ -5,6 +5,7 @@
 - Python 3.9.5
 - flask
 - flask_restful
+- flask_cors
 
 ## Execute os seguintes comandos dentro do diretório `ServerPython/`
 
@@ -24,6 +25,9 @@ pip install flask
 ```
 ```
 pip install flask-restful
+```
+```
+pip install flask-cors
 ```
 
 ### Congelar dependências
